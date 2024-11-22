@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Sewa Akun WhatsApp</h1>
+        <p>Berikan kemudahan dalam berkomunikasi dengan nomor WhatsApp profesional untuk bisnis Anda!</p>
+    </header>
+
+    <!-- Formulir Pemesanan -->
+    <section class="form-section">
+        <h2>Formulir Pemesanan</h2>
+        <form id="order-form">
+            <label for="whatsapp-number">Nomor WhatsApp yang ingin disewa:</label>
+            <input type="text" id="whatsapp-number" name="whatsapp-number" required placeholder="Contoh: +62xxxxxxxxxx">
+
+            <label for="rental-duration">Durasi Sewa (hari):</label>
+            <input type="number" id="rental-duration" name="rental-duration" required min="1" placeholder="Minimal 1 hari">
+
+            <label for="customer-name">Nama Anda:</label>
+            <input type="text" id="customer-name" name="customer-name" required placeholder="Nama lengkap">
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </section>
+
+    <!-- Live Chat -->
+    <div id="chat-button" onclick="toggleChat()">💬 Chat dengan Kami</div>
+
+    <!-- Kotak Chat -->
+    <div id="chat-box" class="chat-box">
+        <div class="chat-header">
+            <h3>Live Chat</h3>
+            <button onclick="closeChat()">X</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Pesan chat akan muncul di sini -->
+        </div>
+        <form id="chat-form" action="submit_message.php" method="POST">
+            <input type="text" id="message" name="message" placeholder="Ketik pesan Anda..." required>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sewa WhatsApp | Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
